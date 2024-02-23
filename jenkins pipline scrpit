@@ -4,6 +4,7 @@ def mavenHome = tool name: 'maven3.9.6'
 
 properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
 properties([[$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
+buildDescription 'Pipline Script - Scriptedway'
 
 echo "Build Number is: ${env.BUILD_NUMBER}"
 echo "Job name is: ${env.JOB_NAME}"
